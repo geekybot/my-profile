@@ -22,6 +22,12 @@ nav{
     overflow-x: hidden;
     overflow-y: hidden;
 }
+a{
+    color: white !important;
+	text-decoration: none;
+    -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;
+}
+
 nav.hiding-nav{
     background-color: rgba(20, 35, 59, 0.9);
     height: 60px;
@@ -47,6 +53,27 @@ nav{
     -webkit-transition-duration: 1s;
     -moz-transition-property: -webkit-transform;
     -moz-transition-duration: 1s;
+}
+
+/* .profname, .nav-link{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    color: white !important;
+} */
+
+.img-responsive2{
+    height: 60px;
+    padding-bottom: 10px;
+}
+
+.nav-item a:hover{
+    background-color:#282e34;
+    border-radius: 5px;
+}
+
+.brname{
+    color:white !important;
+    font-family: 'Lobster', cursive;
 }
 
 .pimg1, .pimg2, .pimg3 {
@@ -81,7 +108,7 @@ nav{
 .section{
     text-align: center;
     padding: 50px 80px;
-
+    background-size: 100%;
 }
 .section-light{
     background-color: #f4f4f4;
