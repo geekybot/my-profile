@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+
+
+    // $("a[rel='m_PageScroll2id']").mPageScroll2id();
+
     const $body = document.getElementsByTagName('body')[0];
 
     const func = function (e) {
@@ -18,17 +22,41 @@ $(document).ready(function () {
 
     $body.addEventListener('scroll', func);
 
+    var scrollLink = $('.scrolla');
 
-    $(".nav-link").click(function(e){
-        var linkhref = $(this).attr('href');
-        // console.log($(linkhref).offset().top);
-        $($body,'body').animate({
-            scrollTop: $(linkhref).offset().top - 60
-        },1000);
+
+    // smooth scrolling
+
+    scrollLink.click(function (e) {
+        var target = $(this).attr('href');
+        // console.log(target);
+        var scrollTop = $body.scrollTop,
+            elementOffset = $(target).offset().top,
+            distance = (scrollTop - elementOffset);
+        console.log(scrollTop, elementOffset, distance);
+
 
         e.preventDefault();
-
+        $($body).animate({
+            // scrollTop: distance
+            scrollTo: $(target).offset().top - 60
+        }, 1000)
+        // console.log($(target).offset());
     });
+
+
+
+
+    // $(".nav-link").click(function(e){
+    //     var linkhref = $(this).attr('href');
+    //     // console.log($(linkhref).offset().top);
+    //     $($body).animate({
+    //         scroll: $(linkhref).offset().top - 60
+    //     },1000);
+
+    //     e.preventDefault();
+
+    // });
 
 
 
